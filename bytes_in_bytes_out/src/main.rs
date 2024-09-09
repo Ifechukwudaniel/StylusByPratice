@@ -1,6 +1,11 @@
 #![cfg_attr(not(feature = "export-abi"), no_main)]
 
-#[cfg(feature = "export-abi")]
-fn main() {
-    stylus_hello_world::print_abi("MIT-OR-APACHE-2.0", "pragma solidity ^0.8.23;");
+extern crate alloc;
+
+use alloc::vec::Vec;
+use stylus_sdk::prelude::entrypoint;
+
+#[entrypoint]
+fn user_main(input:Vec<u8>) -> Result<Vec<u8>, Vec<u8>>{
+   Ok(input)
 }
