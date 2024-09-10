@@ -2,7 +2,7 @@
   "options": {
     "bindings": false,
     "disable": ["bulk-memory"],
-    "use": ["abort=assembly/stylus/stylus/abort"],
+    "use": ["abort=assembly/stylus/index/abort"],
     "runtime": "stub",
     "exportStart": "myStart"
   },
