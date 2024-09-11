@@ -28,7 +28,7 @@ sol! {
 #[derive(SolidityError)]
 pub enum YourContractError {
      // Error for when the sender is not the owner
-     NotOwnerError(NotOwnerError),
+     NotOwnerError(NotOwnerError)
 }
 
 // Define some persistent storage using the Solidity ABI.
