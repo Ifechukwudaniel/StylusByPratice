@@ -6,12 +6,11 @@ extern crate alloc;
 // #[global_allocator]
 // static ALLOC: mini_alloc::MiniAlloc = mini_alloc::MiniAlloc::INIT;
 use alloy_sol_types::sol;
-use alloy_primitives::U256;
 use stylus_sdk::{
     call::transfer_eth, console, evm, msg, prelude::* , contract::balance
 };
-
-
+use alloy_primitives::private;
+use alloy_primitives::{Address , U256};
 
 sol! {
     event GreetingChange(
@@ -27,7 +26,6 @@ sol! {
 
 #[derive(SolidityError)]
 pub enum YourContractError {
-     // Error for when the sender is not the owner
      NotOwnerError(NotOwnerError)
 }
 
